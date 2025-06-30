@@ -1,10 +1,7 @@
 {
-  "startScreen": "original",
-  "isFeatureEnabled": true,
-  "ads": {
-    "interstitial1": "ca-app-pub-3940256099942544/1033173712",
-    "interstitial2": "ca-app-pub-3940256099942544/1033173712",
-    "banner": "ca-app-pub-3940256099942544/6300978111",
-    "native": "ca-app-pub-3940256099942544/2247696110"
-  }
+  "banner": "ca-app-pub-3940256099942544/6300978111",
+  "interstitial1": "ca-app-pub-3940256099942544/1033173712",
+  "interstitial2": "ca-app-pub-3940256099942544/1033173712",
+  "native": "ca-app-pub-3940256099942544/2247696110",
+  "show_welcome_screen": true
 }
