@@ -36,7 +36,7 @@
         .section-padding {
             padding: 60px 0;
         }
-        .service-card, .testimonial-card {
+        .service-card, .testimonial-card, .review-card {
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -44,7 +44,7 @@
             margin-bottom: 20px;
             transition: transform 0.3s;
         }
-        .service-card:hover, .testimonial-card:hover {
+        .service-card:hover, .testimonial-card:hover, .review-card:hover {
             transform: translateY(-5px);
         }
         .service-card h3 {
@@ -58,7 +58,7 @@
             width: 30px;
             height: auto;
         }
-        .testimonial-card img {
+        .testimonial-card img, .review-card img {
             width: 100px;
             height: 100px;
             border-radius: 50%;
@@ -71,6 +71,37 @@
         }
         .modal-content {
             border-radius: 10px;
+        }
+        .clients-served {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1a3c6d;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            background: #fff;
+            padding: 20px 0;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+        .marquee-content img {
+            width: 100px;
+            height: 100px;
+            margin: 0 20px;
+            object-fit: contain;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
         footer {
             background-color: #1a3c6d;
@@ -85,12 +116,19 @@
         .whatsapp-btn:hover {
             background-color: #1ebd56;
         }
+        .star-rating {
+            color: #f1c40f;
+            margin-bottom: 10px;
+        }
         @media (max-width: 768px) {
             .hero-section h1 {
                 font-size: 2rem;
             }
             .service-card .contact-buttons .btn {
                 font-size: 0.9rem;
+            }
+            .clients-served {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -111,6 +149,7 @@
                     <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Our Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                 </ul>
             </div>
@@ -131,6 +170,7 @@
         <div class="container">
             <h2 class="text-center mb-5">About Us</h2>
             <p class="text-center">At PionTech Systems, we specialize in delivering high-impact Google, Meta, and Instagram Ads campaigns that drive measurable results. Our team of digital marketing experts is dedicated to helping businesses of all sizes achieve their goals through targeted advertising, data-driven optimization, and creative strategies. With a focus on KPIs like conversions, engagement, and ROI, we ensure your ad spend delivers maximum value.</p>
+            <p class="clients-served">500+ Clients Served</p>
         </div>
     </section>
 
@@ -292,6 +332,81 @@
                         <p>"The Standard Google Ads Package optimized our campaigns and boosted sales!"</p>
                         <h5>Mary Johnson, Startup Founder</h5>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Client Reviews</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="review-card text-center">
+                        <img src="https://via.placeholder.com/100?text=Reviewer+1" alt="Reviewer 1">
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"PionTech's expertise in Meta Ads transformed our social media presence. Highly recommend!"</p>
+                        <h5>Sarah Lee, Retail Manager</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="review-card text-center">
+                        <img src="https://via.placeholder.com/100?text=Reviewer+2" alt="Reviewer 2">
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"Their Google Ads management increased our conversions by 40%. Amazing service!"</p>
+                        <h5>Mike Brown, Tech Startup</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="review-card text-center">
+                        <img src="https://via.placeholder.com/100?text=Reviewer+3" alt="Reviewer 3">
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The Premium Package for Instagram Ads delivered incredible ROI. Fantastic team!"</p>
+                        <h5>Emily Davis, Freelancer</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Marquee Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">Trusted by Top Brands</h2>
+            <div class="marquee">
+                <div class="marquee-content">
+                    <img src="https://via.placeholder.com/100?text=Client+Logo+1" alt="Client Logo 1">
+                    <img src="https://via.placeholder.com/100?text=Client+Logo+2" alt="Client Logo 2">
+                    <img src="https://via.placeholder.com/100?text=Client+Logo+3" alt="Client Logo 3">
+                    <img src="https://via.placeholder.com/100?text=Client+Logo+4" alt="Client Logo 4">
+                    <img src="https://via.placeholder.com/100?text=Client+Logo+5" alt="Client Logo 5">
+                    <img src="https://via.placeholder.com/100?text=Client+Logo+6" alt="Client Logo 6">
+                    <!-- Duplicate for seamless loop -->
+                    <img src="https://via.placeholder.com/100?text=Client+Logo+1" alt="Client Logo 1">
+                    <img src="https://via.placeholder.com/100?text=Client+Logo+2" alt="Client Logo 2">
+                    <img src="https://via.placeholder.com/100?text=Client+Logo+3" alt="Client Logo 3">
+                    <img src="https://via.placeholder.com/100?text=Client+Logo+4" alt="Client Logo 4">
+                    <img src="https://via.placeholder.com/100?text=Client+Logo+5" alt="Client Logo 5">
+                    <img src="https://via.placeholder.com/100?text=Client+Logo+6" alt="Client Logo 6">
                 </div>
             </div>
         </div>
